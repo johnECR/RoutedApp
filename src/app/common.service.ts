@@ -3,24 +3,24 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class CommonService {
 
-  studColl: Array<object> = [];
-  studObj: {studnum: number, firstname: string, lastname: string, prog: string, year:number};
+  studCollection: Array<object> = [];
+  studRecord: {studnum: number, firstname: string, lastname: string, prog: string, year:number};
 
   constructor() { }
 
-  addNewStud(SNum: number, FName: string, LName: string, SProg: string, SYear:number){
-    this.studObj = {
+  addNewStud(SNum: number, FName: string, LName: string, Prog: string, Year:number){
+    this.studRecord = {
       studnum: SNum,
       firstname: FName,
       lastname: LName,
-      prog: SProg,
-      year: SYear
+      prog: Prog,
+      year: Year
     }
-    this.studColl.push(this.studObj);
+    this.studCollection.push(this.studRecord);
   }
 
   getStud(){
-    return this.studColl;
+    return this.studCollection;
   }
 
 }

@@ -8,12 +8,12 @@ import { CommonService } from '../common.service';
 })
 export class ListStudentComponent implements OnInit {
 
-  studColl: Array<object>;
+  studCollection: Array<object>;
 
   constructor(private dataStore: CommonService) { }
 
   ngOnInit() {
-    this.studColl = this.dataStore.getStud();
+    this.studCollection = this.dataStore.getStud();
   }
 
 }
